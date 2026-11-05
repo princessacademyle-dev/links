@@ -635,3 +635,27 @@
 	--button-background:#0B5CFF;
   --button-border:1px solid #FFFFFF;
 }
+
+.button-itch {
+  background-color: #FA5C5C;
+  color: #fff;
+}
+.button-itch:hover {
+  background-color: #e04a4a;
+}
+
+.button-boosty {
+  background-color: #F15F2C;
+  color: #fff;
+}
+.button-boosty:hover {
+  background-color: #d94f1f;
+}
+
+.button-lava {
+  background-color: #6C4DFF;
+  color: #fff;
+}
+.button-lava:hover {
+  background-color: #5a3de6;
+}

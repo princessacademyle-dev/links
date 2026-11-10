@@ -57,6 +57,15 @@
     <!-- Learn more at https://github.com/sethcottle/littlelink-extended.
          Remove comments if you've added LittleLink Extended dependencies -->
 
+    <!-- Google Analytics 4: replace G-XXXXXXXXXX with your Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-242PCZMF7B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
+
   </head>
 
 <body>
@@ -108,6 +117,21 @@
       </main>
     </div>
   </div>
+
+
+  <!-- Click tracking: sends a "link_click" event to GA4 with the button name -->
+  <script>
+    document.querySelectorAll(".button-stack a.button").forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (typeof gtag !== "function") return;
+        gtag("event", "link_click", {
+          link_name: link.textContent.trim(),
+          link_url: link.href,
+          transport_type: "beacon"
+        });
+      });
+    });
+  </script>
 
 </body>
 
